@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://webkit.up2digital.workers.dev/sitemap.xml
