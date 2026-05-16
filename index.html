@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP2 WebKit — Template Website & Landing Page Siap Pakai</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans for body, Poppins for Logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        neonBlue: '#16C7FF',    /* Neon Blue */
+                        neonPurple: '#8B3DFF',  /* Neon Purple */
+                        neonOrange: '#FF9A1F',  /* Neon Orange */
+                        primary: '#8B3DFF',     /* Main brand color fallback */
+                        secondary: '#0F172A',   /* Dark Navy */
+                        accent: '#16C7FF',      /* Cyan/Blue Accent */
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Phosphor Icons: Modern, lightweight icon set -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body class="font-sans text-secondary antialiased bg-gray-50 selection:bg-neonPurple selection:text-white">
+
+    <!-- FLOATING WA BUTTON (Expandable Modern Tooltip) -->
+    <a href="https://wa.link/i8w855" target="_blank" class="group fixed bottom-10 right-6 bg-gradient-to-r from-neonBlue to-neonPurple text-white h-16 rounded-full shadow-lg shadow-neonPurple/40 z-50 transition-all duration-500 ease-out transform flex items-center justify-center border-2 border-white hover:scale-105 px-4 overflow-hidden">
+        <i class="ph ph-whatsapp-logo text-3xl shrink-0"></i>
+        <span class="max-w-0 opacity-0 group-hover:max-w-[250px] group-hover:opacity-100 transition-all duration-500 ease-in-out whitespace-nowrap font-bold text-sm overflow-hidden text-left pl-0 group-hover:pl-3">
+            Kami Siap Membantu Anda
+        </span>
+    </a>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-lg border-b border-gray-100 shadow-sm z-40 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo area (Click to Top & Extended Hover) -->
+                <a href="#home" class="flex items-center gap-3 cursor-pointer group transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1r4OLymlwKHQuuNCIgdUVNAk7BLofBrUf" alt="UP2 WebKit Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+                    <span class="text-2xl tracking-tight leading-none flex items-center">
+                        <span class="font-poppins font-extrabold text-black transition-colors duration-300 group-hover:text-neonBlue">UP2</span>
+                        <span class="font-poppins font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16C7FF] via-[#8B3DFF] to-[#FF9A1F] logo-text-gradient">WebKit</span>
+                    </span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-sm font-semibold text-gray-600 hover:text-neonPurple transition-colors">Home</a>
+                    <a href="#katalog" class="text-sm font-semibold text-gray-600 hover:text-neonPurple transition-colors">Bidang Usaha</a>
+                    <a href="#pricing" class="text-sm font-semibold text-gray-600 hover:text-neonPurple transition-colors">Harga</a>
+                    <a href="#kenapa-kami" class="text-sm font-semibold text-gray-600 hover:text-neonPurple transition-colors">Keunggulan</a>
+                    <a href="#blog" class="text-sm font-semibold text-gray-600 hover:text-neonPurple transition-colors">Blog</a>
+                </div>
+
+                <!-- CTA Navbar -->
+                <div class="hidden md:flex">
+                    <a href="https://wa.link/i8w855" target="_blank" class="bg-gradient-to-r from-neonPurple to-neonBlue hover:opacity-90 text-white px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-neonPurple/20 hover:shadow-neonPurple/40">
+                        <i class="ph ph-chat-circle-dots text-lg"></i> Konsultasi Gratis
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button (Icon only for preview) -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-secondary hover:text-neonPurple focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-secondary text-white relative overflow-hidden">
+        <!-- Abstract Decoration for Dark Navy background (AI/Neon Vibe) -->
+        <div class="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] bg-neonPurple/20 rounded-full blur-[120px] opacity-70"></div>
+        <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-[500px] h-[500px] bg-neonBlue/20 rounded-full blur-[120px] opacity-70"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-neonBlue mb-8 backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-neonOrange animate-pulse"></span> Solusi Digitalisasi Bisnis Modern
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] min-h-[100px] md:min-h-[160px]">
+                Website Profesional untuk <br class="hidden md:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue via-neonPurple to-neonOrange" id="typewriter-text"></span><span class="text-neonOrange animate-pulse inline-block ml-1">|</span>
+            </h1>
+            
+            <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
+                Platform template website, landing page, dan hybrid website siap pakai. Dirancang khusus untuk tingkatkan konversi UMKM, property, klinik, hingga startup.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+                <a href="#katalog" class="bg-gradient-to-r from-neonPurple to-neonBlue text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-xl shadow-neonPurple/30 transform hover:-translate-y-1 hover:opacity-90">
+                    <i class="ph ph-layout text-2xl"></i> Lihat Template
+                </a>
+                <a href="#katalog" class="bg-white/5 hover:bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
+                    <i class="ph ph-play-circle text-2xl"></i> Lihat Demo
+                </a>
+            </div>
+            
+            <!-- Short Benefit Chips (Animated on Hover) -->
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-6 text-sm font-semibold text-gray-300">
+                <span class="flex items-center gap-2 bg-white/5 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/20 hover:shadow-lg hover:shadow-white/5 cursor-default"><i class="ph-fill ph-device-mobile text-neonBlue text-lg"></i> Mobile Friendly</span>
+                <span class="flex items-center gap-2 bg-white/5 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/20 hover:shadow-lg hover:shadow-white/5 cursor-default"><i class="ph-fill ph-google-logo text-neonPurple text-lg"></i> SEO Friendly</span>
+                <span class="flex items-center gap-2 bg-white/5 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/20 hover:shadow-lg hover:shadow-white/5 cursor-default"><i class="ph-fill ph-lightning text-neonOrange text-lg"></i> Siap Pakai</span>
+                <span class="flex items-center gap-2 bg-white/5 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/20 hover:shadow-lg hover:shadow-white/5 cursor-default"><i class="ph-fill ph-headset text-neonBlue text-lg"></i> Support WA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 & 4: INTERACTIVE NICHE KATALOG (TAB & SHOWCASE PREVIEW) -->
+    <section id="katalog" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-secondary mb-6 tracking-tight">Pilih Template Sesuai <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonPurple to-neonBlue text-gradient-animated">Jenis Usaha</span></h2>
+                <p class="text-lg text-gray-600 font-medium">Temukan struktur dan desain yang paling optimal untuk model bisnis Anda. Pilih kategori dan lihat pratinjau layout-nya.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                <!-- Niche Tabs (Left column) -->
+                <div class="w-full lg:w-1/3 flex flex-col gap-2 h-[550px] overflow-y-auto pr-2 custom-scrollbar" id="niche-tabs">
+                    <!-- Tabs will be injected by JavaScript -->
+                </div>
+
+                <!-- Content Area (Right column - Modern Showcase) -->
+                <div class="w-full lg:w-2/3">
+                    <div class="bg-gray-50 rounded-[2rem] p-6 sm:p-10 border border-gray-100 h-full shadow-sm relative overflow-hidden flex flex-col">
+                        <!-- BG accent inside right box -->
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-neonBlue/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+
+                        <!-- Header area inside showcase container -->
+                        <div class="mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 relative z-10">
+                            <div>
+                                <p class="text-xs font-bold text-neonPurple uppercase tracking-widest mb-2 flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-neonOrange animate-pulse"></span> Preview Desain
+                                </p>
+                                <h3 id="active-niche-title" class="text-3xl sm:text-4xl font-extrabold text-secondary">Property & Perumahan</h3>
+                            </div>
+                            
+                            <!-- Type Selection Toggle -->
+                            <div class="flex bg-gray-200/50 p-1.5 rounded-xl w-full sm:w-auto shrink-0">
+                                <button onclick="changePreviewType('Landing Page', this)" class="type-btn active flex-1 sm:flex-none px-4 py-2 text-sm font-bold rounded-lg bg-white shadow-sm text-neonBlue transition-all">Landing Page</button>
+                                <button onclick="changePreviewType('Website', this)" class="type-btn flex-1 sm:flex-none px-4 py-2 text-sm font-bold rounded-lg text-gray-500 hover:text-secondary transition-all">Website</button>
+                                <button onclick="changePreviewType('Hybrid', this)" class="type-btn flex-1 sm:flex-none px-4 py-2 text-sm font-bold rounded-lg text-gray-500 hover:text-secondary transition-all">Hybrid</button>
+                            </div>
+                        </div>
+
+                        <!-- Modern Browser Mockup Showcase -->
+                        <div class="w-full flex-grow rounded-2xl border border-gray-200 shadow-lg overflow-hidden bg-white relative z-10 group flex flex-col">
+                            <!-- Browser Header -->
+                            <div class="w-full bg-gray-100 h-12 flex items-center px-4 justify-between border-b border-gray-200 shrink-0">
+                                <div class="flex gap-2 w-16">
+                                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                </div>
+                                <div class="bg-white border border-gray-200 px-4 py-1.5 rounded-md text-[10px] text-gray-500 font-medium font-mono max-w-[200px] sm:max-w-[300px] flex-1 truncate text-center shadow-sm flex items-center justify-center gap-1.5">
+                                    <i class="ph-fill ph-lock-key text-green-500"></i>
+                                    up2webkit.com/demo/<span id="preview-url-path">property/landing-page</span>
+                                </div>
+                                <!-- Tombol Live Demo Eksternal -->
+                                <div class="w-auto flex justify-end min-w-[70px]">
+                                    <a id="live-demo-btn" href="#" target="_blank" class="bg-neonBlue/10 hover:bg-neonBlue hover:text-white text-neonBlue px-3 py-1.5 rounded-md text-[11px] font-bold transition-all flex items-center gap-1 whitespace-nowrap border border-neonBlue/20">
+                                        Live Demo <i class="ph-bold ph-arrow-square-out"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Image Display Area -->
+                            <div class="w-full h-[350px] sm:h-[400px] bg-gray-50 overflow-hidden relative cursor-ns-resize" id="showcase-img-container">
+                                
+                                <img id="showcase-image" src="" alt="Template Showcase" class="w-full h-auto object-cover transition-transform duration-[5s] ease-in-out transform group-hover:-translate-y-[calc(100%-400px)] origin-top">
+                                
+                                <!-- Coming Soon State (Moving Gradient) -->
+                                <div id="coming-soon-overlay" class="absolute inset-0 coming-soon-bg flex flex-col items-center justify-center z-20 hidden">
+                                    <i class="ph-fill ph-rocket text-4xl md:text-5xl text-neonPurple mb-4 animate-bounce"></i>
+                                    <h4 class="text-2xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neonPurple to-neonBlue tracking-tight mb-2 text-gradient-animated">Coming Soon</h4>
+                                    <p class="text-xs md:text-sm text-gray-300 font-medium text-center px-4 mt-2 bg-secondary/50 py-1.5 px-4 rounded-full backdrop-blur-sm border border-white/10" id="coming-soon-desc"></p>
+                                </div>
+
+                                <!-- Hover Hint Overlay -->
+                                <div id="hover-hint-overlay" class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-secondary/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2 opacity-100 group-hover:opacity-0 transition-opacity pointer-events-none shadow-xl border border-white/10 z-20">
+                                    <i class="ph ph-mouse-simple animate-bounce text-lg"></i> Hover untuk scroll desain
+                                </div>
+                                
+                                <!-- Loading overlay -->
+                                <div id="showcase-loading" class="absolute inset-0 bg-gray-50/80 backdrop-blur-sm flex items-center justify-center z-30 transition-opacity duration-300 opacity-0 pointer-events-none">
+                                    <i class="ph ph-spinner-gap animate-spin text-4xl text-neonBlue"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info prompt for pricing -->
+                        <div class="mt-6 text-center text-sm text-gray-500 font-medium">
+                            <i class="ph ph-info text-neonPurple"></i> Suka dengan layout ini? Cek harga paketnya di bawah.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PENJELASAN KONSEP HARGA (SIMPLE PRICING VERSION) -->
+    <section id="pricing" class="py-24 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-secondary mb-6 tracking-tight">Pilih Paket Sesuai Target</h2>
+                <p class="text-lg text-gray-600 font-medium">Pilih paket yang paling sesuai dengan target marketing bisnis Anda. Mudah, transparan, siap online.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- CARD 1 — LANDING PAGE -->
+                <div class="bg-white rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-neonBlue/10 transition-all border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="p-8 pb-0">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-neonBlue/10 text-neonBlue text-xs font-bold uppercase tracking-wider mb-4 border border-neonBlue/20">Landing Page</span>
+                        <h3 class="text-2xl font-extrabold text-secondary mb-3">Landing Page Modern</h3>
+                        <p class="text-sm text-gray-600 mb-6 h-16">Cocok untuk promosi produk, jasa, Meta Ads, TikTok Ads, dan WhatsApp marketing.</p>
+                        <div class="mb-6">
+                            <p class="text-gray-500 text-sm font-medium mb-1">Harga</p>
+                            <p class="text-3xl font-extrabold text-secondary flex items-baseline gap-1">Mulai Rp299k</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 pt-6 border-t border-gray-50 bg-gray-50/50 flex-grow">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Isi Paket:</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonBlue text-lg mt-0.5 shrink-0"></i> 1 Landing Page</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonBlue text-lg mt-0.5 shrink-0"></i> WhatsApp Integration</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonBlue text-lg mt-0.5 shrink-0"></i> Mobile Friendly</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonBlue text-lg mt-0.5 shrink-0"></i> SEO Basic Structure</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonBlue text-lg mt-0.5 shrink-0"></i> Integrasi Sosial Media</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonBlue text-lg mt-0.5 shrink-0"></i> 2x Revisi</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonBlue text-lg mt-0.5 shrink-0"></i> Estimasi 7–14 Hari</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 italic font-medium text-center bg-gray-100/50 py-2 rounded-lg mt-4 border border-gray-100/80">Bisa upgrade sesuai kebutuhan bisnis</p>
+                    </div>
+                    <div class="p-8 pt-0 bg-gray-50/50 mt-auto">
+                        <a href="https://lynk.id/up2digital/gkj1918p7j7v/checkout?token=cGFyYW1zPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9" target="_blank" class="w-full block text-center py-3.5 bg-white border-2 border-neonBlue text-neonBlue hover:bg-neonBlue hover:text-white font-bold rounded-xl transition-colors">Beli Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- CARD 2 — WEBSITE BISNIS -->
+                <div class="bg-white rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-neonPurple/10 transition-all border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="p-8 pb-0">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-neonPurple/10 text-neonPurple text-xs font-bold uppercase tracking-wider mb-4 border border-neonPurple/20">Website Bisnis</span>
+                        <h3 class="text-2xl font-extrabold text-secondary mb-3">Website Bisnis Modern</h3>
+                        <p class="text-sm text-gray-600 mb-6 h-16">Website profesional untuk branding bisnis, company profile, dan SEO Google.</p>
+                        <div class="mb-6">
+                            <p class="text-gray-500 text-sm font-medium mb-1">Harga</p>
+                            <p class="text-3xl font-extrabold text-secondary flex items-baseline gap-1">Mulai Rp899k</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 pt-6 border-t border-gray-50 bg-gray-50/50 flex-grow">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Isi Paket:</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonPurple text-lg mt-0.5 shrink-0"></i> 5 Halaman Website</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonPurple text-lg mt-0.5 shrink-0"></i> Portfolio / Gallery</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonPurple text-lg mt-0.5 shrink-0"></i> Google Maps</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonPurple text-lg mt-0.5 shrink-0"></i> WhatsApp Integration</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonPurple text-lg mt-0.5 shrink-0"></i> SEO Friendly Structure</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonPurple text-lg mt-0.5 shrink-0"></i> Blog System Optional</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonPurple text-lg mt-0.5 shrink-0"></i> 3x Revisi</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-secondary"><i class="ph-fill ph-check-circle text-neonPurple text-lg mt-0.5 shrink-0"></i> Estimasi 7–14 Hari</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 italic font-medium text-center bg-gray-100/50 py-2 rounded-lg mt-4 border border-gray-100/80">Bisa upgrade sesuai kebutuhan bisnis</p>
+                    </div>
+                    <div class="p-8 pt-0 bg-gray-50/50 mt-auto">
+                        <a href="https://lynk.id/up2digital/y76vqvdn2r7k/checkout?token=cGFyYW1zPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9" target="_blank" class="w-full block text-center py-3.5 bg-white border-2 border-neonPurple text-neonPurple hover:bg-neonPurple hover:text-white font-bold rounded-xl transition-colors">Beli Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- CARD 3 — HYBRID WEBSITE (BEST VALUE) -->
+                <div class="bg-secondary rounded-[2rem] shadow-2xl border border-secondary text-white overflow-hidden flex flex-col relative group transform md:-translate-y-2">
+                    <!-- Shiny effect -->
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-neonPurple to-neonOrange opacity-20 rounded-full blur-3xl pointer-events-none"></div>
+                    
+                    <div class="p-8 pb-0 relative z-10">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-neonPurple to-neonOrange text-white text-xs font-bold uppercase tracking-wider mb-4 shadow-md">Hybrid Website</span>
+                        <h3 class="text-2xl font-extrabold mb-3">Hybrid Business Website</h3>
+                        <p class="text-sm text-gray-300 mb-6 h-16">Gabungan website bisnis dan landing page untuk meningkatkan leads dan conversion bisnis.</p>
+                        <div class="mb-6">
+                            <p class="text-gray-400 text-sm font-medium mb-1">Harga</p>
+                            <p class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-neonOrange flex items-baseline gap-1">Mulai Rp1,9jt</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 pt-6 border-t border-white/10 bg-white/5 flex-grow relative z-10">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Isi Paket:</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start gap-3 text-sm font-medium text-white"><i class="ph-fill ph-check-circle text-neonOrange text-lg mt-0.5 shrink-0"></i> 5 Halaman Website</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-white"><i class="ph-fill ph-check-circle text-neonOrange text-lg mt-0.5 shrink-0"></i> 1 Landing Flow</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-white"><i class="ph-fill ph-check-circle text-neonOrange text-lg mt-0.5 shrink-0"></i> Landing Conversion Structure</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-white"><i class="ph-fill ph-check-circle text-neonOrange text-lg mt-0.5 shrink-0"></i> WhatsApp Integration</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-white"><i class="ph-fill ph-check-circle text-neonOrange text-lg mt-0.5 shrink-0"></i> SEO Optimization</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-white"><i class="ph-fill ph-check-circle text-neonOrange text-lg mt-0.5 shrink-0"></i> Dashboard Ready</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-white"><i class="ph-fill ph-check-circle text-neonOrange text-lg mt-0.5 shrink-0"></i> Automation Ready</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-white"><i class="ph-fill ph-check-circle text-neonOrange text-lg mt-0.5 shrink-0"></i> 5x Revisi</li>
+                            <li class="flex items-start gap-3 text-sm font-medium text-white"><i class="ph-fill ph-check-circle text-neonOrange text-lg mt-0.5 shrink-0"></i> Estimasi 7–14 Hari</li>
+                        </ul>
+                        <p class="text-xs text-gray-300 italic font-medium text-center bg-white/5 py-2 rounded-lg mt-4 border border-white/10">Bisa upgrade sesuai kebutuhan bisnis</p>
+                    </div>
+                    <div class="p-8 pt-0 bg-white/5 mt-auto relative z-10">
+                        <a href="https://lynk.id/up2digital/ke14j0e0yqy6/checkout?token=cGFyYW1zPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9" target="_blank" class="w-full block text-center py-3.5 bg-gradient-to-r from-neonOrange to-neonPurple text-white hover:opacity-90 font-bold rounded-xl transition-all shadow-lg shadow-neonOrange/20 transform hover:-translate-y-0.5">Beli Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ADD-ON & UPGRADE -->
+    <section id="addons" class="py-24 bg-white relative overflow-hidden border-t border-gray-100">
+        <!-- Minimalist decorative blurs -->
+        <div class="absolute right-0 top-0 w-[400px] h-[400px] bg-neonBlue/5 rounded-full blur-[100px] pointer-events-none -mr-32 -mt-32"></div>
+        <div class="absolute left-0 bottom-0 w-[400px] h-[400px] bg-neonPurple/5 rounded-full blur-[100px] pointer-events-none -ml-32 -mb-32"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neonPurple/10 border border-neonPurple/20 text-xs font-bold text-neonPurple mb-4">
+                    <i class="ph-fill ph-plugs-connected text-lg"></i> Skalabilitas Tanpa Batas
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-secondary mb-6 tracking-tight">Add-On & <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonPurple to-neonBlue text-gradient-animated">Upgrade System</span></h2>
+                <p class="text-lg text-gray-600 font-medium">Tambahkan fitur dan upgrade sesuai kebutuhan bisnis Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                <!-- CATEGORY 1: ESSENTIAL ADD-ON -->
+                <div class="bg-gray-50/80 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl hover:shadow-neonBlue/5 hover:border-gray-200 transition-all flex flex-col group backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-white rounded-2xl border border-gray-100 shadow-sm flex items-center justify-center text-neonBlue mb-6 group-hover:scale-110 transition-transform">
+                        <i class="ph-fill ph-squares-four text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-2">Essential Add-On</h3>
+                    <p class="text-[11px] text-gray-500 mb-6 leading-relaxed">Fitur tambahan dasar untuk meningkatkan fungsi website bisnis.</p>
+                    <div class="space-y-5 flex-grow">
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Setup Domain</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Membantu menghubungkan domain custom ke website</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp150K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Setup Blogger</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Setup & konfigurasi Blogger infrastructure</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp350K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Setup Hosting</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Setup hosting eksternal/custom hosting</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp350K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Form Leads</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Form untuk mengumpulkan data calon customer</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp149K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Blog Setup</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Setup sistem artikel/blog bisnis</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp249K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Custom Section</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Penambahan section custom di website</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp149K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Speed Opt.</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Optimasi kecepatan loading website</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp199K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 2: SEO & GROWTH -->
+                <div class="bg-gray-50/80 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl hover:shadow-neonPurple/5 hover:border-gray-200 transition-all flex flex-col group backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-white rounded-2xl border border-gray-100 shadow-sm flex items-center justify-center text-neonPurple mb-6 group-hover:scale-110 transition-transform">
+                        <i class="ph-fill ph-trend-up text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-2">SEO & Growth</h3>
+                    <p class="text-[11px] text-gray-500 mb-6 leading-relaxed">Fitur optimasi website untuk membantu branding dan pertumbuhan bisnis.</p>
+                    <div class="space-y-5 flex-grow">
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">SEO Basic</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Optimasi dasar agar website mudah ditemukan Google</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonPurple bg-neonPurple/10 px-2.5 py-1 rounded-md shrink-0 border border-neonPurple/10">Rp299K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">SEO Advanced</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Optimasi SEO lanjutan untuk meningkatkan ranking</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonPurple bg-neonPurple/10 px-2.5 py-1 rounded-md shrink-0 border border-neonPurple/10">Rp799K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Artikel SEO</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Artikel blog SEO untuk membantu traffic Google</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonPurple bg-neonPurple/10 px-2.5 py-1 rounded-md shrink-0 border border-neonPurple/10">Rp199K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">GA4 Setup</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Setup tracking pengunjung website</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonPurple bg-neonPurple/10 px-2.5 py-1 rounded-md shrink-0 border border-neonPurple/10">Rp149K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">GMB Setup</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Setup profil bisnis Google Maps & Search</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonPurple bg-neonPurple/10 px-2.5 py-1 rounded-md shrink-0 border border-neonPurple/10">Rp199K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Copywriting LP</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Pembuatan copywriting landing page conversion oriented</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonPurple bg-neonPurple/10 px-2.5 py-1 rounded-md shrink-0 border border-neonPurple/10">Rp499K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3: BUSINESS SYSTEM -->
+                <div class="bg-gray-50/80 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl hover:shadow-neonOrange/5 hover:border-gray-200 transition-all flex flex-col group backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-white rounded-2xl border border-gray-100 shadow-sm flex items-center justify-center text-neonOrange mb-6 group-hover:scale-110 transition-transform">
+                        <i class="ph-fill ph-cpu text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-2">Business System</h3>
+                    <p class="text-[11px] text-gray-500 mb-6 leading-relaxed">Fitur tambahan untuk website bisnis yang ingin scale up dan lebih otomatis.</p>
+                    <div class="space-y-5 flex-grow">
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Booking System</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Sistem booking/reservasi online</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonOrange bg-neonOrange/10 px-2.5 py-1 rounded-md shrink-0 border border-neonOrange/10">Rp1,5JT</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Dashboard Admin</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Dashboard pengelolaan data bisnis</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonOrange bg-neonOrange/10 px-2.5 py-1 rounded-md shrink-0 border border-neonOrange/10">Rp2,5JT</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">CRM Basic</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Sistem pengelolaan data customer</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonOrange bg-neonOrange/10 px-2.5 py-1 rounded-md shrink-0 border border-neonOrange/10">Rp2,9JT</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Membership Area</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Area member/login customer</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonOrange bg-neonOrange/10 px-2.5 py-1 rounded-md shrink-0 border border-neonOrange/10">Rp2JT</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Multi User Login</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Sistem multi akun/admin</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonOrange bg-neonOrange/10 px-2.5 py-1 rounded-md shrink-0 border border-neonOrange/10">Rp1,5JT</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Payment Gateway</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Integrasi pembayaran otomatis</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonOrange bg-neonOrange/10 px-2.5 py-1 rounded-md shrink-0 border border-neonOrange/10">Rp1,2JT</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">WA Automation</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Sistem WhatsApp otomatis & notifikasi</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonOrange bg-neonOrange/10 px-2.5 py-1 rounded-md shrink-0 border border-neonOrange/10">Rp3JT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 4: REDESIGN & OPTIMIZATION -->
+                <div class="bg-gray-50/80 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl hover:shadow-neonBlue/5 hover:border-gray-200 transition-all flex flex-col group backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-white rounded-2xl border border-gray-100 shadow-sm flex items-center justify-center text-neonBlue mb-6 group-hover:scale-110 transition-transform">
+                        <i class="ph-fill ph-magic-wand text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-secondary mb-2">Redesign Package</h3>
+                    <p class="text-[11px] text-gray-500 mb-6 leading-relaxed">Upgrade tampilan dan pengalaman website agar lebih modern dan profesional.</p>
+                    <div class="space-y-5 flex-grow">
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">LP Redesign</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Perombakan tampilan landing page</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp499K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Web Redesign</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Perombakan desain website bisnis</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp1,5JT</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Hybrid Redesign</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Redesign hybrid ecosystem website</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp3,9JT</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">UI Modernization</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Upgrade tampilan jadi lebih modern</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp999K</span>
+                        </div>
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <p class="text-sm font-bold text-secondary">Mobile Opt.</p>
+                                <p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Optimasi tampilan mobile</p>
+                            </div>
+                            <span class="text-xs font-extrabold text-neonBlue bg-neonBlue/10 px-2.5 py-1 rounded-md shrink-0 border border-neonBlue/10">Rp499K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: KENAPA PILIH UP2 WEBKIT -->
+    <section id="kenapa-kami" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute -left-32 top-1/2 -translate-y-1/2 w-96 h-96 bg-neonBlue/5 rounded-full blur-[100px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2">
+                    <div class="relative">
+                        <!-- Abstract Image placeholder (Animated Hover Float) -->
+                        <div class="aspect-square bg-gray-50 rounded-[2.5rem] overflow-hidden relative border border-gray-100 shadow-2xl shadow-neonPurple/5 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(139,61,255,0.2)]">
+                            <img src="https://lh3.googleusercontent.com/d/1GcnUFSoIBXKQzNeI2YtdXLmU7gReRrAz" alt="Modern Dashboard Mockup" class="object-cover w-full h-full">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neonPurple/10 border border-neonPurple/20 text-xs font-bold text-neonPurple mb-6">
+                        <i class="ph-fill ph-star"></i> Dirancang untuk Bisnis Era AI
+                    </div>
+                    <!-- Judul Kredibel (Animated Gradient) -->
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-secondary mb-6 tracking-tight leading-tight">Buat Bisnis Anda Tampil <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-neonPurple text-gradient-animated">Lebih Kredibel</span></h2>
+                    <p class="text-lg text-gray-600 mb-10 font-medium">Bukan sekadar template biasa. Struktur website kami didesain mengikuti kaidah UX, clean code, dan teknik marketing modern.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="flex gap-4 group cursor-default">
+                            <div class="w-12 h-12 shrink-0 bg-neonBlue/10 rounded-2xl flex items-center justify-center text-neonBlue transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-6">
+                                <i class="ph ph-paint-brush-broad text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-secondary mb-1">Desain SaaS Modern</h4>
+                                <p class="text-sm text-gray-500">Tampilan clean minimalis tingkatkan trust.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 group cursor-default">
+                            <div class="w-12 h-12 shrink-0 bg-neonPurple/10 rounded-2xl flex items-center justify-center text-neonPurple transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-6">
+                                <i class="ph ph-rocket-launch text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-secondary mb-1">Loading Super Cepat</h4>
+                                <p class="text-sm text-gray-500">Performa tinggi untuk pengalaman terbaik.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 group cursor-default">
+                            <div class="w-12 h-12 shrink-0 bg-neonOrange/10 rounded-2xl flex items-center justify-center text-neonOrange transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-6">
+                                <i class="ph ph-pencil-simple text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-secondary mb-1">Mudah Diedit</h4>
+                                <p class="text-sm text-gray-500">Konten bisa disesuaikan tanpa ngoding.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 group cursor-default">
+                            <div class="w-12 h-12 shrink-0 bg-neonBlue/10 rounded-2xl flex items-center justify-center text-neonBlue transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-6">
+                                <i class="ph ph-headset text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-secondary mb-1">Support WhatsApp</h4>
+                                <p class="text-sm text-gray-500">Bantuan cepat via chat dari tim ahli kami.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FAQ -->
+    <section id="faq" class="py-24 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neonPurple/10 border border-neonPurple/20 text-xs font-bold text-neonPurple mb-4">
+                    <i class="ph-fill ph-question text-lg"></i> FAQ
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-secondary mb-6 tracking-tight">Pertanyaan yang Sering Diajukan</h2>
+                <p class="text-lg text-gray-600 font-medium">Temukan jawaban cepat untuk keraguan Anda sebelum memulai.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                <!-- Item 1 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">1. Apakah template bisa digunakan untuk berbagai jenis usaha?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Ya. Template dapat digunakan untuk property, klinik, travel, UMKM, cafe, sekolah, dan berbagai jenis bisnis lainnya.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">2. Apakah website sudah mobile friendly?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Ya. Semua desain responsive dan optimal untuk HP, tablet, maupun desktop.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">3. Apakah website bisa muncul di Google?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Ya. Struktur website dibuat SEO friendly agar mudah terindeks Google.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">4. Berapa lama pengerjaan landing page, website dan hybrid website?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Estimasi pengerjaan: Landing Page, Website Bisnis, dan Hybrid Website membutuhkan waktu sekitar 7–14 hari kerja tergantung kebutuhan dan antrian project.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">5. Berapa kali revisi yang didapat?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li><strong>Landing Page:</strong> 2x revisi</li>
+                                <li><strong>Website Bisnis:</strong> 3x revisi</li>
+                                <li><strong>Hybrid Website:</strong> 5x revisi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">6. Apakah domain dan hosting sudah termasuk?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Tidak. Domain dan hosting tersedia sebagai add-on tambahan.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">7. Apakah tersedia support setelah pembelian?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Ya. Support WhatsApp tersedia sesuai kebutuhan project.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">8. Apakah website bisa diedit atau diupdate?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Ya. Perubahan konten seperti teks, gambar, harga, dan informasi bisnis dapat dibantu oleh tim UP2 WebKit atau menggunakan add-on Editable Content System.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">9. Apa itu Editable Content System?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Fitur tambahan yang memungkinkan beberapa bagian website diupdate lebih mudah menggunakan sistem sederhana tanpa perlu edit kode manual.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">10. Apakah template bisa custom?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Ya. Kami menyediakan layanan custom design dan penambahan fitur sesuai kebutuhan bisnis Anda.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 11 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">11. Apakah website bisa upgrade di kemudian hari?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Ya. Website dapat diupgrade sesuai kebutuhan bisnis seperti penambahan halaman, blog, dashboard, automation, hingga sistem hybrid.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 12 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">12. Apa bedanya Landing Page, Website Bisnis, dan Hybrid Website?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            <strong>Landing Page</strong> fokus untuk promosi dan iklan digital. <br>
+                            <strong>Website Bisnis</strong> fokus untuk branding dan company profile. <br>
+                            <strong>Hybrid Website</strong> menggabungkan website bisnis, landing page, dan struktur conversion untuk kebutuhan bisnis yang lebih berkembang.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 13 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">13. Apakah saya harus mengerti coding untuk menggunakan website?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Tidak. Website dirancang agar mudah digunakan dan dapat dibantu oleh tim UP2 WebKit.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 14 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">14. Apakah website bisa menggunakan domain sendiri?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Ya. Anda dapat menggunakan domain custom seperti .com, .id, atau lainnya melalui add-on domain.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 15 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFAQ(this)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
+                        <span class="font-bold text-secondary group-hover:text-neonBlue transition-colors pr-4">15. Apakah tersedia jasa maintenance website?</span>
+                        <i class="ph ph-caret-down faq-icon text-gray-400 transition-transform duration-300 text-xl flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+                            Ya. Kami menyediakan paket maintenance bulanan untuk update, monitoring, dan optimasi website bisnis.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG / ARTIKEL -->
+    <section id="blog" class="py-24 bg-white relative border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neonOrange/10 border border-neonOrange/20 text-xs font-bold text-neonOrange mb-4">
+                        <i class="ph-fill ph-article text-lg"></i> Blog & Insight
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-secondary tracking-tight">Strategi Digital <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonOrange to-neonPurple">Bisnis Modern</span></h2>
+                </div>
+                <a href="https://kulineriadigital.blogspot.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-neonPurple font-bold hover:text-neonBlue transition-colors">
+                    Lihat Semua Artikel <i class="ph-bold ph-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Kontainer Postingan Blog -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="blog-container">
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA & FOOTER -->
+    <section class="py-24 bg-secondary text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
+        <!-- Decorative blobs -->
+        <div class="absolute top-0 left-0 w-80 h-80 bg-neonPurple rounded-full blur-[120px] opacity-40 -ml-20 -mt-20"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-neonBlue rounded-full blur-[120px] opacity-40 -mr-20 -mb-20"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <!-- Animated Typewriter CTA -->
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight min-h-[100px] md:min-h-[160px]">Siap Punya <br class="md:hidden"><span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue via-neonPurple to-neonOrange text-gradient-animated" id="typewriter-cta"></span><span class="text-neonOrange animate-pulse inline-block ml-1">|</span></h2>
+            <p class="text-xl text-gray-400 mb-10 font-medium max-w-2xl mx-auto mt-2">Tingkatkan kredibilitas dan omset bisnis Anda hari ini. Konsultasikan kebutuhan Anda gratis.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <!-- Hover Glowing & Pulse Button -->
+                <div class="relative inline-flex group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-neonBlue to-neonPurple rounded-full blur opacity-70 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+                    <a href="https://wa.link/i8w855" target="_blank" class="relative inline-flex bg-gradient-to-r from-neonBlue to-neonPurple text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 items-center justify-center gap-2 transform group-hover:scale-105">
+                        <i class="ph-fill ph-whatsapp-logo text-2xl"></i> Hubungi Kami via WA
+                    </a>
+                </div>
+                <a href="#pricing" class="inline-flex bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 items-center justify-center gap-2 backdrop-blur-sm hover:scale-105 hover:shadow-lg">
+                    Lihat Semua Paket
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0A0F1C] border-t border-gray-800 text-gray-400 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <!-- Footer Logo (Click to Top & Extended Hover) -->
+                    <a href="#home" class="flex items-center gap-3 mb-6 cursor-pointer group w-fit transition-all duration-300">
+                        <img src="https://lh3.googleusercontent.com/d/1r4OLymlwKHQuuNCIgdUVNAk7BLofBrUf" alt="UP2 WebKit Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300 bg-white p-1.5 rounded-xl">
+                        <span class="text-2xl tracking-tight flex items-center">
+                            <span class="font-poppins font-extrabold text-white transition-colors duration-300 group-hover:text-neonBlue">UP2</span>
+                            <span class="font-poppins font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#16C7FF] via-[#8B3DFF] to-[#FF9A1F] logo-text-gradient">WebKit</span>
+                        </span>
+                    </a>
+                    <p class="text-sm leading-relaxed max-w-sm text-gray-500">Platform penyedia template website dan landing page bergaya modern SaaS siap pakai untuk berbagai jenis UMKM dan startup di Indonesia.</p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Layanan</h5>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#pricing" class="hover:text-neonBlue transition-colors">Landing Page</a></li>
+                        <li><a href="#pricing" class="hover:text-neonBlue transition-colors">Website Bisnis</a></li>
+                        <li><a href="#pricing" class="hover:text-neonBlue transition-colors">Hybrid Website</a></li>
+                        <li><a href="https://wa.link/i8w855" target="_blank" class="hover:text-neonBlue transition-colors">Jasa Custom</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Kontak</h5>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="https://wa.link/i8w855" target="_blank" class="flex items-center gap-2 hover:text-white transition-colors">
+                                <i class="ph ph-whatsapp-logo text-lg text-neonBlue"></i> Hubungi Customer Service
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3 mt-6">
+                            <a href="https://www.instagram.com/up2.media/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-neonPurple text-white transition-colors"><i class="ph ph-instagram-logo text-lg"></i></a>
+                            <a href="https://www.tiktok.com/@up2.media" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-neonBlue text-white transition-colors"><i class="ph ph-tiktok-logo text-lg"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800/50 pt-8 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-gray-500">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2026 UP2 WebKit by UP2 Digi-App. All rights reserved.</p>
+                    <a href="https://wa.link/i8w855" target="_blank" class="mt-1 text-xs inline-block font-bold text-transparent bg-clip-text bg-gradient-to-r from-neonBlue via-neonPurple to-neonOrange text-gradient-animated hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(139,61,255,0.5)] transition-all duration-300 cursor-pointer">Part of UP2 Digital Ecosystem</a>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" onclick="openModal('modal-tnc', event)" class="hover:text-white transition-colors cursor-pointer">Syarat & Ketentuan</a>
+                    <a href="#" onclick="openModal('modal-privacy', event)" class="hover:text-white transition-colors cursor-pointer">Kebijakan Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS SECTION -->
+    <!-- Modal Syarat & Ketentuan -->
+    <div id="modal-tnc" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <!-- Backdrop Blur -->
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal('modal-tnc')"></div>
+        
+        <!-- Modal Content Container -->
+        <div class="relative bg-white rounded-[2rem] p-8 md:p-10 w-full max-w-2xl shadow-2xl transform scale-95 transition-transform duration-300 border border-gray-100" id="modal-tnc-content">
+            <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-neonPurple/10 text-neonPurple flex items-center justify-center">
+                        <i class="ph ph-file-text text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-secondary">Syarat & Ketentuan</h3>
+                </div>
+                <button onclick="closeModal('modal-tnc')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-red-50 text-gray-400 hover:text-red-500 transition-colors">
+                    <i class="ph ph-x text-xl font-bold"></i>
+                </button>
+            </div>
+            
+            <div class="prose prose-sm sm:prose-base text-gray-600 max-w-none">
+                <ul class="space-y-4 pl-2 list-none">
+                    <li class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 text-neonBlue font-bold flex items-center justify-center border border-gray-100">1</span>
+                        <p class="mt-1">Dengan menggunakan layanan UP2 WebKit, pengguna dianggap memahami dan menyetujui seluruh ketentuan yang berlaku.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 text-neonBlue font-bold flex items-center justify-center border border-gray-100">2</span>
+                        <p class="mt-1">Template yang dibeli hanya digunakan untuk kebutuhan bisnis pengguna dan <strong>tidak diperbolehkan diperjualbelikan ulang</strong> tanpa izin.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 text-neonBlue font-bold flex items-center justify-center border border-gray-100">3</span>
+                        <p class="mt-1">Pengerjaan mengikuti antrian project dan ketentuan paket yang telah disepakati.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 text-neonBlue font-bold flex items-center justify-center border border-gray-100">4</span>
+                        <div class="mt-1 w-full">
+                            <p>Revisi diberikan sesuai paket:</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                                <li><strong>Landing Page:</strong> maksimal 2x revisi</li>
+                                <li><strong>Website Bisnis:</strong> maksimal 3x revisi</li>
+                                <li><strong>Hybrid Website:</strong> maksimal 5x revisi</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-gray-500 italic">Revisi tidak termasuk perubahan konsep desain total atau penambahan fitur baru.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 text-neonBlue font-bold flex items-center justify-center border border-gray-100">5</span>
+                        <p class="mt-1 text-red-500 font-medium">Pembayaran yang sudah dilakukan tidak dapat dikembalikan <i>(non-refundable)</i>.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="mt-10 pt-6 flex justify-end">
+                <button onclick="closeModal('modal-tnc')" class="bg-gradient-to-r from-neonPurple to-neonBlue text-white px-8 py-3 rounded-full font-bold shadow-lg shadow-neonPurple/20 hover:opacity-90 hover:-translate-y-0.5 transition-all">
+                    Saya Mengerti
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Kebijakan Privasi -->
+    <div id="modal-privacy" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <!-- Backdrop Blur -->
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal('modal-privacy')"></div>
+        
+        <!-- Modal Content Container -->
+        <div class="relative bg-white rounded-[2rem] p-8 md:p-10 w-full max-w-2xl shadow-2xl transform scale-95 transition-transform duration-300 border border-gray-100" id="modal-privacy-content">
+            <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-5">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-neonPurple/10 text-neonPurple flex items-center justify-center">
+                        <i class="ph ph-shield-check text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-secondary">Kebijakan Privasi</h3>
+                </div>
+                <button onclick="closeModal('modal-privacy')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-red-50 text-gray-400 hover:text-red-500 transition-colors">
+                    <i class="ph ph-x text-xl font-bold"></i>
+                </button>
+            </div>
+            
+            <div class="prose prose-sm sm:prose-base text-gray-600 max-w-none">
+                <ul class="space-y-4 pl-2 list-none">
+                    <li class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 text-neonBlue font-bold flex items-center justify-center border border-gray-100">1</span>
+                        <p class="mt-1">UP2 WebKit menghargai privasi pengguna. Informasi seperti nama, email, nomor WhatsApp, dan data bisnis hanya digunakan untuk kebutuhan layanan dan komunikasi.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 text-neonBlue font-bold flex items-center justify-center border border-gray-100">2</span>
+                        <p class="mt-1">Kami tidak membagikan data pengguna kepada pihak ketiga tanpa izin pengguna.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 text-neonBlue font-bold flex items-center justify-center border border-gray-100">3</span>
+                        <p class="mt-1">Website dapat menggunakan cookies atau analytics untuk meningkatkan pengalaman pengguna.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 text-neonBlue font-bold flex items-center justify-center border border-gray-100">4</span>
+                        <p class="mt-1">Dengan menggunakan layanan UP2 WebKit, pengguna dianggap menyetujui kebijakan privasi ini.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="mt-10 pt-6 flex justify-end">
+                <button onclick="closeModal('modal-privacy')" class="bg-gradient-to-r from-neonPurple to-neonBlue text-white px-8 py-3 rounded-full font-bold shadow-lg shadow-neonPurple/20 hover:opacity-90 hover:-translate-y-0.5 transition-all">
+                    Saya Mengerti
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Article Detail (Solusi SPA Error) -->
+    <div id="modal-article" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <!-- Backdrop Blur -->
+        <div class="absolute inset-0 bg-secondary/80 backdrop-blur-sm" onclick="closeModal('modal-article')"></div>
+        
+        <!-- Modal Content Container -->
+        <div class="relative bg-white rounded-[2rem] w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl transform scale-95 transition-transform duration-300 border border-gray-100 overflow-hidden" id="modal-article-content">
+            
+            <!-- Header -->
+            <div class="flex justify-between items-center px-6 md:px-8 py-5 md:py-6 border-b border-gray-100 bg-white z-10 shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-neonOrange/10 text-neonOrange flex items-center justify-center">
+                        <i class="ph-fill ph-article text-xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-extrabold text-secondary">Artikel Blog</h3>
+                </div>
+                <button onclick="closeModal('modal-article')" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-red-50 text-gray-400 hover:text-red-500 transition-colors">
+                    <i class="ph ph-x text-xl font-bold"></i>
+                </button>
+            </div>
+            
+            <!-- Body (Scrollable) -->
+            <div class="overflow-y-auto custom-scrollbar p-6 md:p-8 relative flex-grow">
+                <img id="article-img" src="" class="w-full h-48 md:h-80 object-cover rounded-2xl mb-6 md:mb-8 border border-gray-100 shadow-sm">
+                <div class="flex flex-wrap items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                    <span id="article-category" class="bg-neonPurple/10 text-neonPurple px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wider uppercase">Kategori</span>
+                    <span id="article-date" class="text-gray-500 text-xs md:text-sm font-medium flex items-center gap-1.5"><i class="ph ph-calendar-blank"></i> Tanggal</span>
+                </div>
+                <h2 id="article-title" class="text-2xl md:text-4xl font-extrabold text-secondary mb-6 md:mb-8 leading-tight">Judul Artikel</h2>
+                
+                <div class="prose prose-sm md:prose-lg text-gray-600 max-w-none space-y-4 md:space-y-6">
+                    <p>Membawa bisnis Anda ke ranah digital bukan lagi sekadar pilihan, melainkan sebuah keharusan di era modern ini. Melalui artikel ini, kami membahas berbagai strategi penting yang dapat langsung diterapkan pada model bisnis Anda untuk menjangkau audiens yang lebih luas dan meningkatkan konversi penjualan.</p>
+                    <p>Strategi digital yang tepat dimulai dari memiliki fondasi website yang cepat, desain yang berpusat pada pengguna (User Experience), serta struktur yang dioptimalkan untuk mesin pencari (SEO). Kombinasi dari ketiga elemen ini akan menciptakan ekosistem digital yang kuat untuk jangka panjang.</p>
+                    <div class="bg-neonBlue/5 p-5 md:p-6 rounded-2xl border border-neonBlue/10 my-6 md:my-8">
+                        <h4 class="font-bold text-secondary mb-2 text-base md:text-lg">💡 Insight Kunci:</h4>
+                        <p class="text-sm">Traffic yang tinggi tidak akan berarti jika halaman website Anda lambat atau membingungkan. Fokuslah pada <strong>Conversion Rate Optimization (CRO)</strong> bersamaan dengan kampanye iklan digital Anda.</p>
+                    </div>
+                    <p>Bagi pelaku bisnis, memiliki sistem yang terintegrasi seperti form leads otomatis dan interaksi live chat akan memangkas waktu tunggu respon pelanggan secara drastis, sehingga meminimalisir kemungkinan calon pelanggan berpindah ke kompetitor.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <style>
+        /* Custom scrollbar for tabs - minimalist thin style */
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #e2e8f0; border-radius: 20px; }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb { background-color: #cbd5e1; }
+        
+        /* Logo Hover Gradient Animation */
+        .logo-text-gradient {
+            background-size: 200% auto;
+            transition: all 0.5s ease;
+        }
+        .group:hover .logo-text-gradient {
+            animation: gradientMove 3s linear infinite;
+        }
+
+        /* Continuous Text Gradient Animation */
+        .text-gradient-animated {
+            background-size: 200% auto;
+            animation: gradientMove 3s linear infinite;
+        }
+        
+        /* Coming Soon Screen Background (Moving Gradient) */
+        .coming-soon-bg {
+            background: linear-gradient(270deg, #0F172A, #1e1b4b, #312e81, #0F172A);
+            background-size: 200% 200%;
+            animation: gradientMove 4s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+    </style>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-sm');
+                nav.classList.replace('bg-white/90', 'bg-white/95');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.replace('bg-white/95', 'bg-white/90');
+            }
+        });
+
+        // ==========================================
+        // TYPEWRITER EFFECT LOGIC (HERO SECTION)
+        // ==========================================
+        const typeWords = ["UMKM", "Property", "Klinik", "Travel", "Startup", "Personal Brand", "Corporate"];
+        let typeIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typeTextElement = document.getElementById("typewriter-text");
+
+        function typeWriter() {
+            if(!typeTextElement) return;
+            const currentWord = typeWords[typeIndex];
+            
+            if (isDeleting) {
+                typeTextElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typeTextElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000; // Pause at end of word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                typeIndex = (typeIndex + 1) % typeWords.length;
+                typeSpeed = 500; // Pause before typing next word
+            }
+
+            setTimeout(typeWriter, typeSpeed);
+        }
+
+        // ==========================================
+        // TYPEWRITER EFFECT LOGIC (CTA SECTION)
+        // ==========================================
+        const typeWordsCta = ["Website Profesional?", "Sistem Bisnis Otomatis?", "Landing Page Modern?", "Aplikasi Web Custom?"];
+        let typeIndexCta = 0;
+        let charIndexCta = 0;
+        let isDeletingCta = false;
+        const typeTextElementCta = document.getElementById("typewriter-cta");
+
+        function typeWriterCta() {
+            if(!typeTextElementCta) return;
+            const currentWord = typeWordsCta[typeIndexCta];
+            
+            if (isDeletingCta) {
+                typeTextElementCta.textContent = currentWord.substring(0, charIndexCta - 1);
+                charIndexCta--;
+            } else {
+                typeTextElementCta.textContent = currentWord.substring(0, charIndexCta + 1);
+                charIndexCta++;
+            }
+
+            let typeSpeed = isDeletingCta ? 40 : 80;
+
+            if (!isDeletingCta && charIndexCta === currentWord.length) {
+                typeSpeed = 2500; // Pause at end of word
+                isDeletingCta = true;
+            } else if (isDeletingCta && charIndexCta === 0) {
+                isDeletingCta = false;
+                typeIndexCta = (typeIndexCta + 1) % typeWordsCta.length;
+                typeSpeed = 500; // Pause before typing next word
+            }
+
+            setTimeout(typeWriterCta, typeSpeed);
+        }
+
+        // ==========================================
+        // SHOWCASE DATA & NICHE TABS LOGIC
+        // ==========================================
+        const showcaseData = [
+            { niche: "Property & Perumahan", kategori: "Landing Page", live: "https://property-lp-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1mMx-NeMtkQ2-tS0cMbz54MJoLLyMf64F" },
+            { niche: "Property & Perumahan", kategori: "Website", live: "https://property-web-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1Ku3rm4LhYHVKxPbtfV0tptRRVqgWkrRd" },
+            { niche: "Property & Perumahan", kategori: "Hybrid", live: "https://property-wh-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1K4Mn9kg56syZMPSVHOWevZR14cguaDeu" },
+            { niche: "Klinik & Kecantikan", kategori: "Landing Page", live: "https://clinic-lp-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1UBYYYUEATxgrztdhAPmjfmSMASOgZiC2" },
+            { niche: "Klinik & Kecantikan", kategori: "Website", live: "https://clinic-web-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1Z90IAM3t0VT2-eFPG06KPbuaKoLjewC5" },
+            { niche: "Travel Umroh & Wisata", kategori: "Landing Page", live: "https://travel-lp-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1SPDwd0VkSgbFnHlz-ZJamiTUmtUNq3AK" },
+            { niche: "Travel Umroh & Wisata", kategori: "Hybrid", live: "https://travel-wh-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1ZQtmMSclJQuwbXorWLXlzg6pvSdVvYjh" },
+            { niche: "Sekolah & Yayasan", kategori: "Website", live: "https://school-web-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1Glnak00MS2McvSi0Ge5bcEmCxRLETLjB" },
+            { niche: "Interior & Kontraktor", kategori: "Website", live: "https://interior-web-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1lcP65Rg1q9JeKxIfQPZnMGTRLW0vFL6i" },
+            { niche: "UMKM & Jasa Lokal", kategori: "Landing Page", live: "https://umkm-lp-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/14yjMN-s6S0gJDqP_LLkRvFbR_v_Hdiqz" },
+            { niche: "Cafe & Kuliner", kategori: "Landing Page", live: "https://cafe-lp-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1q5x0bc_If61uRlofKcVh5Ui8MY0QuCxX" },
+            { niche: "Wedding & Event", kategori: "Landing Page", live: "https://wedding-lp-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1CIe8sMeJK8JF_cMsAlkNX0bwRDUKeE9g" },
+            { niche: "Personal Brand", kategori: "Landing Page", live: "https://personalbrand-lp-demo.up2digital.workers.dev/", preview: "https://lh3.googleusercontent.com/d/1gQuCZoV80x0nxAgxLrG1r02htHF5XnwW" }
+        ];
+
+        // Fungsi Helper Cerdas: Mencocokkan data Niche dengan Array showcaseData
+        function getPreviewData(nicheName, type) {
+            const foundData = showcaseData.find(item => item.niche === nicheName && item.kategori === type);
+            if (foundData) {
+                return { img: foundData.preview, demo: foundData.live, isAvailable: true };
+            } else {
+                return { img: '', demo: '#', isAvailable: false };
+            }
+        }
+
+        // Daftar 11 Niche Master
+        const nichesList = [
+            { id: 'property', name: 'Property & Perumahan', icon: 'ph-buildings' },
+            { id: 'klinik', name: 'Klinik & Kecantikan', icon: 'ph-first-aid' },
+            { id: 'travel', name: 'Travel Umroh & Wisata', icon: 'ph-airplane-tilt' },
+            { id: 'sekolah', name: 'Sekolah & Yayasan', icon: 'ph-graduation-cap' },
+            { id: 'wedding', name: 'Wedding & Event', icon: 'ph-confetti' },
+            { id: 'interior', name: 'Interior & Kontraktor', icon: 'ph-paint-roller' },
+            { id: 'cafe', name: 'Cafe & Kuliner', icon: 'ph-coffee' },
+            { id: 'bengkel', name: 'Otomotif & Bengkel', icon: 'ph-wrench' },
+            { id: 'villa', name: 'Villa / Glamping', icon: 'ph-house-line' },
+            { id: 'umkm', name: 'UMKM & Jasa Lokal', icon: 'ph-storefront' },
+            { id: 'personal', name: 'Personal Brand', icon: 'ph-user-focus' }
+        ];
+
+        // Mapping Data Otomatis
+        const niches = nichesList.map(n => ({
+            ...n,
+            previews: {
+                'Landing Page': getPreviewData(n.name, 'Landing Page'),
+                'Website': getPreviewData(n.name, 'Website'),
+                'Hybrid': getPreviewData(n.name, 'Hybrid')
+            }
+        }));
+
+        const tabsContainer = document.getElementById('niche-tabs');
+        
+        // Global variables for Showcase tracking
+        let currentNicheName = 'Property & Perumahan';
+        let currentPreviewType = 'Landing Page';
+
+        // CSS Classes for Tabs (Modern minimalist SaaS look)
+        const classInactive = "w-full text-left px-5 py-4 rounded-2xl flex items-center justify-between gap-3 transition-all font-bold border bg-white hover:bg-gray-50 text-secondary border-gray-100 hover:border-gray-200 group shrink-0";
+        const classActive = "w-full text-left px-5 py-4 rounded-2xl flex items-center justify-between gap-3 transition-all font-bold border border-transparent bg-gradient-to-r from-neonPurple to-neonBlue text-white shadow-lg shadow-neonPurple/20 shrink-0";
+
+        // Initialize Render Tabs
+        niches.forEach((niche, index) => {
+            const btn = document.createElement('button');
+            btn.className = index === 0 ? classActive : classInactive;
+            
+            // Icon color styling based on state
+            const iconClass = index === 0 ? "text-white" : "text-neonPurple group-hover:text-neonBlue";
+            const caretIcon = `<i class="ph-bold ph-caret-right text-sm ${index === 0 ? 'text-white' : 'text-gray-300 group-hover:text-neonBlue'}"></i>`;
+
+            btn.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <i class="ph-fill ${niche.icon} text-2xl ${iconClass}"></i> 
+                    <span>${niche.name}</span>
+                </div>
+                ${caretIcon}
+            `;
+            
+            btn.onclick = () => {
+                // Reset all tabs
+                Array.from(tabsContainer.children).forEach(child => {
+                    child.className = classInactive;
+                    const i = child.querySelector('.ph-fill');
+                    const c = child.querySelector('.ph-caret-right');
+                    i.classList.remove('text-white'); i.classList.add('text-neonPurple', 'group-hover:text-neonBlue');
+                    c.classList.remove('text-white'); c.classList.add('text-gray-300', 'group-hover:text-neonBlue');
+                });
+                
+                // Set active tab
+                btn.className = classActive;
+                const actI = btn.querySelector('.ph-fill');
+                const actC = btn.querySelector('.ph-caret-right');
+                actI.classList.remove('text-neonPurple', 'group-hover:text-neonBlue'); actI.classList.add('text-white');
+                actC.classList.remove('text-gray-300', 'group-hover:text-neonBlue'); actC.classList.add('text-white');
+                
+                // Update global niche and refresh showcase
+                currentNicheName = niche.name;
+                document.getElementById('active-niche-title').innerText = niche.name;
+                
+                updateShowcase();
+            };
+            tabsContainer.appendChild(btn);
+        });
+
+        // Functions for Modern Showcase Area
+        function changePreviewType(type, element) {
+            currentPreviewType = type;
+            
+            // Update styling of type selection buttons
+            const allBtns = document.querySelectorAll('.type-btn');
+            allBtns.forEach(btn => {
+                btn.className = "type-btn flex-1 sm:flex-none px-4 py-2 text-sm font-bold rounded-lg text-gray-500 hover:text-secondary transition-all";
+            });
+            element.className = "type-btn active flex-1 sm:flex-none px-4 py-2 text-sm font-bold rounded-lg bg-white shadow-sm text-neonBlue transition-all";
+            
+            // Refresh showcase image
+            updateShowcase();
+        }
+
+        // Logic Baru Memanggil Gambar dari Data Struktur
+        function updateShowcase() {
+            const imgEl = document.getElementById('showcase-image');
+            const urlPath = document.getElementById('preview-url-path');
+            const loadingOverlay = document.getElementById('showcase-loading');
+            const demoBtn = document.getElementById('live-demo-btn');
+            const overlayComingSoon = document.getElementById('coming-soon-overlay');
+            const comingSoonDesc = document.getElementById('coming-soon-desc');
+            const hoverHint = document.getElementById('hover-hint-overlay');
+            
+            // Show loading overlay
+            loadingOverlay.classList.remove('opacity-0');
+            
+            // Format URL path strings
+            const formattedNiche = currentNicheName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            const formattedType = currentPreviewType.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            urlPath.innerText = `${formattedNiche}/${formattedType}`;
+            
+            // Ambil data spesifik berdasarkan tab dan filter
+            const currentData = niches.find(n => n.name === currentNicheName);
+            const previewData = currentData.previews[currentPreviewType];
+            
+            // Simulate loading system
+            setTimeout(() => {
+                if (previewData.isAvailable) {
+                    // Jika data tersedia
+                    imgEl.src = previewData.img;
+                    imgEl.classList.remove('hidden');
+                    overlayComingSoon.classList.add('hidden');
+                    hoverHint.classList.remove('hidden');
+                    
+                    demoBtn.href = previewData.demo;
+                    demoBtn.classList.remove('opacity-50', 'pointer-events-none');
+                    demoBtn.innerHTML = `Live Demo <i class="ph-bold ph-arrow-square-out"></i>`;
+                } else {
+                    // Jika data KOSONG (Coming Soon)
+                    imgEl.src = '';
+                    imgEl.classList.add('hidden');
+                    overlayComingSoon.classList.remove('hidden');
+                    comingSoonDesc.innerText = `${currentNicheName} - ${currentPreviewType}`;
+                    hoverHint.classList.add('hidden');
+                    
+                    demoBtn.href = '#';
+                    demoBtn.classList.add('opacity-50', 'pointer-events-none');
+                    demoBtn.innerHTML = `Demo Segera <i class="ph-bold ph-hourglass"></i>`;
+                }
+
+                loadingOverlay.classList.add('opacity-0');
+            }, 300);
+            
+            // Reset image position
+            imgEl.style.transform = 'translateY(0)';
+        }
+
+        // Data Global Artikel Blog (Support SPA dan Perbaikan Gambar)
+        const blogPostsData = [
+            {
+                title: "Kenapa UMKM Wajib Punya Website di Tahun 2026?",
+                thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+                date: "12 Mei 2026",
+                category: "Edukasi Bisnis"
+            },
+            {
+                title: "5 Contoh Landing Page Property yang Menghasilkan Banyak Leads",
+                thumbnail: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80",
+                date: "08 Mei 2026",
+                category: "Inspirasi & Tips"
+            },
+            {
+                title: "Cara Meningkatkan Pasien Klinik Kecantikan via Meta Ads",
+                thumbnail: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+                date: "02 Mei 2026",
+                category: "Digital Marketing"
+            }
+        ];
+
+        // Fungsi Render Blog ke HTML dengan SPA onClick Modal
+        function renderBlogPosts() {
+            const blogContainer = document.getElementById('blog-container');
+            
+            blogContainer.innerHTML = blogPostsData.map((post, index) => `
+                <a href="#" onclick="openArticleDetail(event, ${index})" class="group block bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl hover:shadow-neonPurple/10 transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-56 overflow-hidden relative bg-gray-200">
+                        <img src="${post.thumbnail}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold text-neonPurple shadow-sm">
+                            ${post.category}
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-gray-500 font-medium mb-3 flex items-center gap-1.5"><i class="ph ph-calendar-blank"></i> ${post.date}</p>
+                        <h4 class="text-lg font-extrabold text-secondary mb-3 group-hover:text-neonBlue transition-colors line-clamp-2 leading-tight">${post.title}</h4>
+                        <p class="text-sm font-bold text-neonPurple group-hover:text-neonBlue transition-colors flex items-center gap-1">Baca selengkapnya <i class="ph-bold ph-arrow-right"></i></p>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Fungsi untuk membuka detail artikel menggunakan Modal (Tanpa Error Refresh Page SPA)
+        function openArticleDetail(e, index) {
+            e.preventDefault();
+            const post = blogPostsData[index];
+            document.getElementById('article-title').innerText = post.title;
+            document.getElementById('article-img').src = post.thumbnail;
+            document.getElementById('article-category').innerText = post.category;
+            document.getElementById('article-date').innerHTML = '<i class="ph ph-calendar-blank"></i> ' + post.date;
+            openModal('modal-article', e);
+        }
+
+        // Initialize UI components on load
+        window.addEventListener('DOMContentLoaded', () => {
+            updateShowcase();
+            renderBlogPosts(); 
+            setTimeout(typeWriter, 1000); 
+            setTimeout(typeWriterCta, 1500); // Animasi typewriter kedua untuk CTA
+        });
+
+
+        // Functions for Modals (T&C, Privacy Policy, etc)
+        function openModal(id, e) {
+            if(e) e.preventDefault();
+            const modal = document.getElementById(id);
+            const content = document.getElementById(id + '-content');
+            
+            modal.classList.remove('hidden');
+            // Trigger reflow to ensure transition works
+            void modal.offsetWidth; 
+            
+            modal.classList.remove('opacity-0');
+            modal.classList.add('opacity-100');
+            content.classList.remove('scale-95');
+            content.classList.add('scale-100');
+            
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            const content = document.getElementById(id + '-content');
+            
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            content.classList.remove('scale-100');
+            content.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                // Restore body scrolling
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Functions for FAQ Accordion
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            const item = button.closest('.faq-item');
+            
+            // Close other open FAQs
+            const allContents = document.querySelectorAll('.faq-content');
+            const allIcons = document.querySelectorAll('.faq-icon');
+            const allItems = document.querySelectorAll('.faq-item');
+            
+            allContents.forEach(c => {
+                if (c !== content) c.style.maxHeight = null;
+            });
+            allIcons.forEach(i => {
+                if (i !== icon) {
+                    i.style.transform = 'rotate(0deg)';
+                    i.classList.remove('text-neonBlue');
+                }
+            });
+            allItems.forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('border-neonBlue', 'shadow-md');
+                }
+            });
+
+            // Toggle current FAQ
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+                icon.classList.remove('text-neonBlue');
+                item.classList.remove('border-neonBlue', 'shadow-md');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+                icon.classList.add('text-neonBlue');
+                item.classList.add('border-neonBlue', 'shadow-md');
+            }
+        }
+    </script>
+</body>
+</html>
